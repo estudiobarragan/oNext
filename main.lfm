@@ -1,0 +1,525 @@
+object frAdmin: TfrAdmin
+  Left = 318
+  Height = 609
+  Top = 109
+  Width = 697
+  Caption = 'Next: Administración de conversaciones'
+  ClientHeight = 589
+  ClientWidth = 697
+  DefaultMonitor = dmDesktop
+  Menu = mMenu
+  OnActivate = FormActivate
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.6.4.0'
+  object btAdd: TButton
+    Left = 608
+    Height = 25
+    Top = 22
+    Width = 75
+    Caption = 'Agregar'
+    OnClick = btAddClick
+    OnKeyDown = edMensajeKeyDown
+    TabOrder = 2
+  end
+  object edName: TEdit
+    Left = 16
+    Height = 23
+    Top = 24
+    Width = 344
+    OnKeyDown = edMensajeKeyDown
+    OnKeyPress = edNameKeyPress
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 21
+    Height = 15
+    Top = 7
+    Width = 44
+    Caption = '&Nombre'
+    FocusControl = edName
+    ParentColor = False
+  end
+  object Panel1: TPanel
+    AnchorSideTop.Side = asrBottom
+    Left = 0
+    Height = 528
+    Top = 61
+    Width = 697
+    Align = alBottom
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 7
+    Caption = 'Panel1'
+    ClientHeight = 528
+    ClientWidth = 697
+    TabOrder = 3
+    object Bevel2: TBevel
+      Left = 473
+      Height = 48
+      Top = 111
+      Width = 208
+    end
+    object Bevel3: TBevel
+      Left = 472
+      Height = 48
+      Top = 176
+      Width = 208
+    end
+    object Bevel4: TBevel
+      Left = 472
+      Height = 72
+      Top = 240
+      Width = 208
+    end
+    object Bevel5: TBevel
+      Left = 472
+      Height = 65
+      Top = 335
+      Width = 208
+    end
+    object Panel2: TPanel
+      Left = 1
+      Height = 83
+      Top = 444
+      Width = 695
+      Align = alBottom
+      ClientHeight = 83
+      ClientWidth = 695
+      TabOrder = 0
+      object Label3: TLabel
+        Left = 33
+        Height = 15
+        Top = 16
+        Width = 47
+        Caption = '&Mensaje:'
+        FocusControl = edMensaje
+        ParentColor = False
+      end
+      object edMensaje: TEdit
+        Left = 90
+        Height = 23
+        Top = 11
+        Width = 366
+        OnClick = edMensajeClick
+        OnKeyDown = edMensajeKeyDown
+        OnKeyPress = edMensajeKeyPress
+        TabOrder = 0
+      end
+      object cbMensaje: TComboBox
+        Left = 88
+        Height = 23
+        Top = 42
+        Width = 367
+        ItemHeight = 15
+        OnChange = cbMensajeChange
+        OnKeyDown = edMensajeKeyDown
+        TabOrder = 1
+        Text = '<Seleccione el mensaje>'
+      end
+      object sbAddMsg: TSpeedButton
+        Left = 464
+        Height = 22
+        Top = 11
+        Width = 23
+        Caption = '+'
+        Color = 8454143
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -15
+        Font.Name = 'Century Gothic'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        Transparent = False
+        OnClick = sbAddMsgClick
+        ParentFont = False
+      end
+      object Label5: TLabel
+        Left = 5
+        Height = 15
+        Top = 42
+        Width = 75
+        Caption = 'Configurados:'
+        ParentColor = False
+      end
+      object btMensaje: TButton
+        Left = 464
+        Height = 25
+        Top = 42
+        Width = 88
+        Caption = '&Enviar Mensaje'
+        OnClick = btMensajeClick
+        OnKeyDown = edMensajeKeyDown
+        OnKeyPress = btMensajeKeyPress
+        TabOrder = 2
+      end
+    end
+    object Panel3: TPanel
+      Left = 1
+      Height = 86
+      Top = 1
+      Width = 695
+      Align = alTop
+      BorderStyle = bsSingle
+      ClientHeight = 82
+      ClientWidth = 691
+      TabOrder = 1
+      object Bevel1: TBevel
+        Left = 16
+        Height = 28
+        Top = 8
+        Width = 624
+        Shape = bsBottomLine
+        Style = bsRaised
+      end
+      object Label2: TLabel
+        Left = 24
+        Height = 15
+        Top = 12
+        Width = 47
+        Caption = '&Proximo:'
+        ParentColor = False
+      end
+      object lbProximo: TLabel
+        Left = 88
+        Height = 22
+        Top = 8
+        Width = 85
+        Caption = 'lbProximo'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object btAviso: TButton
+        Left = 123
+        Height = 25
+        Top = 48
+        Width = 75
+        Caption = '&Avisar'
+        Enabled = False
+        OnClick = btAvisoClick
+        TabOrder = 0
+      end
+      object btStart: TButton
+        Left = 337
+        Height = 25
+        Top = 48
+        Width = 75
+        Caption = '&Tiempo'
+        Enabled = False
+        OnClick = btStartClick
+        TabOrder = 1
+      end
+      object btStop: TButton
+        Left = 566
+        Height = 25
+        Top = 48
+        Width = 75
+        Caption = '&Stop'
+        Enabled = False
+        OnClick = btStopClick
+        TabOrder = 2
+      end
+      object tbPausa: TToggleBox
+        Left = 444
+        Height = 25
+        Top = 48
+        Width = 90
+        Caption = 'Pausa'
+        Enabled = False
+        OnChange = tbPausaChange
+        TabOrder = 3
+      end
+      object btReinicio: TButton
+        Left = 230
+        Height = 25
+        Top = 48
+        Width = 75
+        Caption = 'Reinicio'
+        Enabled = False
+        OnClick = btReinicioClick
+        TabOrder = 4
+      end
+      object btExp: TButton
+        Left = 16
+        Height = 25
+        Top = 48
+        Width = 75
+        Caption = 'E&xpositores'
+        OnClick = btExpClick
+        TabOrder = 5
+      end
+      object cbEstado: TCheckBox
+        Left = 576
+        Height = 19
+        Top = 12
+        Width = 55
+        Caption = 'Estado'
+        Enabled = False
+        OnChange = cbEstadoChange
+        TabOrder = 6
+      end
+    end
+    object Memo1: TMemo
+      Left = 1
+      Height = 334
+      Top = 105
+      Width = 226
+      Align = alLeft
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 2
+    end
+    object Memo2: TMemo
+      Left = 232
+      Height = 334
+      Top = 105
+      Width = 230
+      Align = alLeft
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 3
+    end
+    object Splitter2: TSplitter
+      Cursor = crVSplit
+      Left = 1
+      Height = 5
+      Top = 439
+      Width = 695
+      Align = alBottom
+      ResizeAnchor = akBottom
+    end
+    object Panel4: TPanel
+      Left = 1
+      Height = 18
+      Top = 87
+      Width = 695
+      Align = alTop
+      ClientHeight = 18
+      ClientWidth = 695
+      TabOrder = 5
+      object Label4: TLabel
+        Left = 24
+        Height = 15
+        Top = 0
+        Width = 130
+        Caption = 'Lista ordenada por carga'
+        ParentColor = False
+      end
+      object Label6: TLabel
+        Left = 280
+        Height = 15
+        Top = 0
+        Width = 102
+        Caption = 'Lista de expositores'
+        ParentColor = False
+      end
+      object Label7: TLabel
+        Left = 504
+        Height = 15
+        Top = 0
+        Width = 107
+        Caption = 'Panel de proyecciòn'
+        ParentColor = False
+      end
+    end
+    object laExpSig: TLabel
+      Left = 480
+      Height = 15
+      Top = 200
+      Width = 5
+      Caption = '-'
+      ParentColor = False
+    end
+    object laExpAct: TLabel
+      Left = 481
+      Height = 15
+      Top = 136
+      Width = 5
+      Caption = '-'
+      ParentColor = False
+    end
+    object laPte: TLabel
+      Left = 608
+      Height = 15
+      Top = 248
+      Width = 5
+      Caption = '-'
+      ParentColor = False
+    end
+    object Splitter1: TSplitter
+      Left = 227
+      Height = 334
+      Top = 105
+      Width = 5
+    end
+    object laMsg: TLabel
+      Left = 481
+      Height = 15
+      Top = 368
+      Width = 5
+      Caption = '-'
+      ParentColor = False
+    end
+    object laTiempo: TLabel
+      Left = 608
+      Height = 15
+      Top = 288
+      Width = 5
+      Caption = '-'
+      ParentColor = False
+    end
+    object Label8: TLabel
+      Left = 480
+      Height = 15
+      Top = 120
+      Width = 85
+      Caption = 'Expositor Actual'
+      ParentColor = False
+    end
+    object Label9: TLabel
+      Left = 481
+      Height = 15
+      Top = 184
+      Width = 100
+      Caption = 'Expositor Siguiente'
+      ParentColor = False
+    end
+    object Label10: TLabel
+      Left = 481
+      Height = 15
+      Top = 248
+      Width = 118
+      Caption = 'Anotados pendientes: '
+      ParentColor = False
+    end
+    object Label11: TLabel
+      Left = 552
+      Height = 15
+      Top = 288
+      Width = 44
+      Caption = 'Tiempo:'
+      ParentColor = False
+    end
+    object Label12: TLabel
+      Left = 481
+      Height = 15
+      Top = 344
+      Width = 44
+      Caption = 'Mensaje'
+      ParentColor = False
+    end
+  end
+  object rgIdioma: TRadioGroup
+    Left = 376
+    Height = 41
+    Top = 8
+    Width = 208
+    AutoFill = True
+    Caption = '&Idioma'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclTopToBottomThenLeftToRight
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 21
+    ClientWidth = 204
+    ColumnLayout = clVerticalThenHorizontal
+    TabOrder = 1
+    object rb0: TRadioButton
+      Tag = 1
+      Left = 6
+      Height = 21
+      Top = 0
+      Width = 48
+      Caption = 'spa'
+      Checked = True
+      OnClick = rb0Click
+      TabOrder = 0
+      TabStop = True
+    end
+    object rb1: TRadioButton
+      Tag = 2
+      Left = 54
+      Height = 21
+      Top = 0
+      Width = 41
+      Caption = 'br'
+      OnClick = rb0Click
+      TabOrder = 1
+    end
+    object rb2: TRadioButton
+      Tag = 3
+      Left = 95
+      Height = 21
+      Top = 0
+      Width = 50
+      Caption = 'eng'
+      OnClick = rb0Click
+      TabOrder = 2
+    end
+    object rb3: TRadioButton
+      Tag = 4
+      Left = 145
+      Height = 21
+      Top = 0
+      Width = 53
+      Caption = 'Otro'
+      TabOrder = 3
+    end
+  end
+  object mMenu: TMainMenu
+    left = 376
+    top = 256
+    object mConfig: TMenuItem
+      Caption = '&Configurar'
+      OnClick = mConfigClick
+    end
+    object miEstadistica: TMenuItem
+      Caption = 'Estadistica'
+      OnClick = miEstadisticaClick
+    end
+    object mH: TMenuItem
+      Caption = '&Herramientas'
+      object mhOriginal: TMenuItem
+        Caption = 'Mostrar Original &1'
+        OnClick = mhOriginalClick
+      end
+      object mhOrdenada: TMenuItem
+        Caption = 'Mostrar Ordenada &2'
+        OnClick = mhOrdenadaClick
+      end
+      object MenuItem6: TMenuItem
+        Caption = '-'
+      end
+      object mhReConfig: TMenuItem
+        Caption = '&ReConfigurar'
+        OnClick = mhReConfigClick
+      end
+      object mhBackup: TMenuItem
+        Caption = '&Backup'
+        OnClick = mhBackupClick
+      end
+      object mhWhiteFlag: TMenuItem
+        Caption = '&White Flag'
+        OnClick = mhWhiteFlagClick
+      end
+      object mhVaciar: TMenuItem
+        Caption = '&Vaciar'
+        OnClick = mhVaciarClick
+      end
+    end
+    object mEnd: TMenuItem
+      Caption = '&Salir'
+      OnClick = mEndClick
+    end
+  end
+end

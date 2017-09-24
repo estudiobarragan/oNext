@@ -1,0 +1,251 @@
+object frProyec: TfrProyec
+  Left = 1628
+  Height = 982
+  Top = 10
+  Width = 1103
+  Caption = 'Next: Administración de conversaciones'
+  ClientHeight = 982
+  ClientWidth = 1103
+  DefaultMonitor = dmPrimary
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 820
+    Top = 112
+    Width = 1103
+    Align = alClient
+    ClientHeight = 820
+    ClientWidth = 1103
+    TabOrder = 0
+    object Panel4: TPanel
+      Left = 1
+      Height = 818
+      Top = 1
+      Width = 1101
+      Align = alClient
+      ClientHeight = 818
+      ClientWidth = 1101
+      TabOrder = 0
+      object spV: TShape
+        Left = 1
+        Height = 816
+        Top = 1
+        Width = 1099
+        Align = alClient
+        Brush.Color = clGreen
+        Shape = stCircle
+        Visible = False
+      end
+      object spA: TShape
+        Left = 1
+        Height = 816
+        Top = 1
+        Width = 1099
+        Align = alClient
+        Brush.Color = clYellow
+        Shape = stCircle
+        Visible = False
+      end
+      object spR: TShape
+        Left = 1
+        Height = 816
+        Top = 1
+        Width = 1099
+        Align = alClient
+        Brush.Color = clRed
+        Shape = stCircle
+        Visible = False
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 50
+    Top = 932
+    Width = 1103
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 1103
+    TabOrder = 1
+    object Label3: TLabel
+      Left = 8
+      Height = 21
+      Top = 24
+      Width = 76
+      Caption = 'Siguiente:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Century Gothic'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object lbSiguiente: TLabel
+      AnchorSideRight.Control = Panel6
+      Left = 88
+      Height = 33
+      Top = 8
+      Width = 784
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = False
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -27
+      Font.Name = 'Century Gothic'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Panel5: TPanel
+      Left = 928
+      Height = 48
+      Top = 1
+      Width = 174
+      Align = alRight
+      ClientHeight = 48
+      ClientWidth = 174
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 1
+        Height = 33
+        Top = 14
+        Width = 90
+        Align = alLeft
+        BorderSpacing.Top = 13
+        Caption = 'Pendientes:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -16
+        Font.Name = 'Century Gothic'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object laPte: TLabel
+        Left = 101
+        Height = 39
+        Top = 8
+        Width = 64
+        Align = alRight
+        BorderSpacing.Top = 7
+        BorderSpacing.Right = 8
+        Caption = 'laPte'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -27
+        Font.Name = 'Century Gothic'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object Panel6: TPanel
+      Left = 872
+      Height = 48
+      Top = 1
+      Width = 56
+      Align = alRight
+      ClientHeight = 48
+      ClientWidth = 56
+      TabOrder = 1
+      object lbLenP: TLabel
+        Left = 1
+        Height = 41
+        Top = 6
+        Width = 54
+        Align = alClient
+        Alignment = taCenter
+        BorderSpacing.Top = 5
+        Caption = 'SPA'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -27
+        Font.Name = 'Century Gothic'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 112
+    Top = 0
+    Width = 1103
+    Align = alTop
+    ClientHeight = 112
+    ClientWidth = 1103
+    TabOrder = 2
+    object Label2: TLabel
+      Left = 8
+      Height = 21
+      Top = 16
+      Width = 58
+      Caption = 'Actual:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Century Gothic'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object lbLenA: TLabel
+      Left = 1010
+      Height = 110
+      Top = 1
+      Width = 87
+      Align = alRight
+      Alignment = taCenter
+      BorderSpacing.Right = 5
+      Caption = 'SPA'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -48
+      Font.Name = 'Century Gothic'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object lbActual: TLabel
+      AnchorSideTop.Control = Panel3
+      AnchorSideRight.Control = lbLenA
+      Left = 56
+      Height = 56
+      Top = 1
+      Width = 954
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = False
+      Caption = 'ANOTARSE EN LA LISTA'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -48
+      Font.Name = 'Century Gothic'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    left = 16
+    top = 96
+  end
+  object tiBlink: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = tiBlinkTimer
+    left = 945
+    top = 229
+  end
+end
